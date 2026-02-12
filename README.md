@@ -25,9 +25,10 @@ This is the content of the notification.
 ```
 
 expected result:
-### System Alert
-#### Database sync complete!
-
+```html
+System Alert
+Database sync complete!
+```
 ------------------------------------------------------------------------------------------------------
 
 🛠 Further Features:
