@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification System Test</title>
+    <script src="notifier.js"></script>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            font-family: sans-serif;
+        }
+        .controls {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button.secondary {
+            background-color: #6c757d;
+        }
+        h1 { color: #333; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <h1>Uni-Notifier Test</h1>
+        <p>Click the buttons below to test the FILO stack logic.</p>
+        
+        <button onclick="sendMessage('New Message', 'This is a test notification!')">
+            Send Single Notification
+        </button>
+
+        <button class="secondary" onclick="runStackTest()">
+            Spawn 3 Notifications
+        </button>
+    </div>
+
+    <script>
+        // A little helper to show off the stacking/tweening speed
+        function runStackTest() {
+            sendMessage('Priority 1', 'I am the first to be called.');
+            setTimeout(() => sendMessage('Priority 2', 'I pushed the first one down.'), 500);
+            setTimeout(() => sendMessage('Priority 3', 'I am now at the top of the stack.'), 1000);
+        }
+    </script>
+
+</body>
+</html>
