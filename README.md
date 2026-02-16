@@ -42,5 +42,5 @@ Database sync complete!
 If you have any complaints please notify the super group.
 
 Developed by:
-.Fady~
-.Mayuresh~
+Fady
+Mayuresh
