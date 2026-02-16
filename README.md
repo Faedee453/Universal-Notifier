@@ -33,8 +33,8 @@ Database sync complete!
 
 🛠 Further Features:
 
-+ Smooth animations per message.
-+ FILO (first in last out) system message meaning error overlap wont break message stream.
++ Smooth animations per notification.
++ F.I.L.O (First In Last Out) system message meaning error overlap wont break message stream.
 + Simple drop in no external dependancies.
 
 ------------------------------------------------------------------------------------------------------
